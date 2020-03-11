@@ -7,9 +7,12 @@ app.use(express.json())
 // Api routes directed to routes/api.js
 app.use('/api', require('./routes/api'))
 
+// Setting up a static folder
+app.use(express.static('public'))
+
 // Creating a route for home page
 app.get('/', (request, response) => {
-	response.send("Server is here")
+	response.sendFile("index.html")
 })
 app.listen('3000', (err, success) => {
 	if(err) throw err

@@ -1,5 +1,11 @@
 const router = require('express').Router()
 
+router.post('/requestButler', (request, response) => {
+	const requestList = request.body
+	const butlerList = allocateAndReport(requestList)
+	response.json(butlerList)
+})
+
 const allocateAndReport = (requestList) => {
 	
 	// Initiate an empty butler list
@@ -57,32 +63,7 @@ const allocateAndReport = (requestList) => {
 			})
 		}
 	})
-	console.log(butlerList)
+	return butlerList
 }
-
-const exampleRequests = [
-	    {
-		    clientId: 1,
-		    requestId: 'abc',
-		    hours: 6
-	    },
-	    {
-	            clientId: 2,
-	            requestId: 'ghi',
-	            hours: 1
-	    },
-	    {
-	            clientId: 1,
-	            requestId: 'def',
-	            hours: 4
-	    },
-	    {
-	            clientId: 1,
-	            requestId: 'zzz',
-	            hours: 2
-	    }
-]
-
-allocateAndReport(exampleRequests)
 
 module.exports = router
