@@ -1,0 +1,24 @@
+{
+  "name": "butler-allot",
+  "version": "1.0.0",
+  "description": "This is a task to assign butler to the requested tasklist",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priyesh-zero/jarvis-task-butler-allot.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "ExpressJs",
+    "Bootstrap"
+  ],
+  "author": "Priyesh Shrivastava",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/priyesh-zero/jarvis-task-butler-allot/issues"
+  },
+  "homepage": "https://github.com/priyesh-zero/jarvis-task-butler-allot#readme"
+}
